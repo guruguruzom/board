@@ -9,7 +9,7 @@ import lombok.Data;
  * */
 @Data
 public class BoaderSummary {
-	private int itemSeq;
+	private int boaderSeq;
 	private String title;
 	private String writer;
 	private Date updateAt;

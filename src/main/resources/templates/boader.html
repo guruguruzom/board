@@ -5,6 +5,53 @@
 <title>Title</title>
 </head>
 <body>
+<script>
+var setBoader = function() {
+	$('#userTable > tbody > tr');
+	//tableTr.find('td').eq(6).find(".btndataSet").css("display",displayState);
+}
+</script>
+<div class="jb-table-full">
+			<div class="jb-table-cell jb-middle">
+				<div class="contentsTitle">
+					<h1>데이터셋 목록</h1>
+				</div>
+			</div>
+			<div class="jb-table-cell divRight">
+				
+				<div id="dataSetRegistPopup" class="btnw140">
+					<span>데이터셋 등록</span>
+				</div>
+				<div id="dataSetRefresh" class="btnRefresh mr10">
+					<img th:src="@{/img/refresh-arrow.png}" alt="" width="20">
+				</div>
+			</div>
+		</div>
+		<!--data set list-->
+		<div class="datasettableArea mt20">
+			<table id="userTable" class="list_table">
+				<colgroup>
+					<col style="width:5%"/>
+					<col style="width:12%"/>
+					<col style="width:13%"/>
+					<col style="width:10%"/>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">No</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성자</th>
+					<th scope="col">수정일</th>
+				</tr>
+				</thead>
+				<tbody>
+		
+				</tbody>
+			</table>
+			<div id="dataSetNotFound" class="notFound tac">조회된 데이터셋이 없습니다.</div>
+		</div>
+		
+	</div>
 	
 </body>
 </html>

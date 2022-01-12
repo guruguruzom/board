@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.guruguruzom.boader.util.ResultUtil;
 import com.guruguruzom.boader.valueset.ServiceCode;
@@ -49,5 +50,10 @@ public class BoaderController {
 		System.out.println(ServiceCode.SUCCESS_CODE.getCode());
 		
 		return ResultUtil.ResultToMap(ServiceCode.SUCCESS_CODE, null, request);
+	}
+	
+	@PostMapping("/file")
+	public Map<String, Object> handleUpload(HttpServletRequest request, @RequestParam("data") MultipartFile multipartFile, @RequestParam("fileType") String fileType) {
+		return null;
 	}
 }
