@@ -1,8 +1,11 @@
 package com.guruguruzom.boader.controller;
 
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -54,6 +57,11 @@ public class BoaderController {
 	
 	@PostMapping("/file")
 	public Map<String, Object> handleUpload(HttpServletRequest request, @RequestParam("data") MultipartFile multipartFile, @RequestParam("fileType") String fileType) {
+		String fileName = multipartFile.getOriginalFilename();
+		byte[] fineNameByte = new byte[] {};
+		SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss", Locale.KOREA);
+		
+		String date = format.format(new Date());
 		return null;
 	}
 }
